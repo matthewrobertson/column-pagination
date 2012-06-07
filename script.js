@@ -28,9 +28,26 @@ else {
 
 // calculate how many columns the content has been divided into
 var calc_num_pages = function() {
-	var length = $('#content')[0].scrollWidth;
+	var length;
 	var width = parseInt($('#content').css(COLUMN_WIDTH_PROP), 10);
 	var gap = parseInt($('#content').css(COLUMN_GAP_PROP), 10);
+
+	if( $.browser.mozilla ) {
+		var $cont = $('#container');
+		$cont.css("overflow", "scroll");
+		length = $cont[0].scrollWidth;
+		length += parseInt($('#content').css("right"), 10);
+		$cont.css("overflow", "hidden");
+		if(two_up) {
+			length = length - width - gap;
+		}
+	}
+	else {
+		length = $('#content')[0].scrollWidth;
+	}
+	
+	
+
 	return Math.floor( (length + gap) / (width + gap) );
 };
 
