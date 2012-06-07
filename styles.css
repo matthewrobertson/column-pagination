@@ -57,5 +57,10 @@ html, body {
     -moz-transition-property: opacity;  
     -moz-transition-duration: 0.1s;  
     -moz-transition-timing-function: ease;  
+    -ms-column-width: 440px;
+    -ms-column-gap: 10px;
+    -ms-transition-property: opacity;  
+    -ms-transition-duration: 0.1s;  
+    -ms-transition-timing-function: ease;  
     
 }​

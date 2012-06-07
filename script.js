@@ -17,8 +17,8 @@ else if( $.browser.opera ) {
 	COLUMN_GAP_PROP = '-oColumnGap';
 }
 else if( $.browser.msie && parseInt($.browser.version, 10) >= 10 ) {
-	COLUMN_WIDTH_PROP = '-ieColumnWidth';
-	COLUMN_GAP_PROP = '-ieColumnGap';
+	COLUMN_WIDTH_PROP = '-msColumnWidth';
+	COLUMN_GAP_PROP = '-msColumnGap';
 }
 else {
 	COLUMN_WIDTH_PROP = 'columnWidth';
