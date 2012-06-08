@@ -52,6 +52,7 @@ html, body {
     -webkit-transition-property: opacity;  
     -webkit-transition-duration: 0.1s;  
     -webkit-transition-timing-function: ease;  
+    -webkit-column-axis: horizontal;
     -moz-column-width: 440px;
     -moz-column-gap: 10px;
     -moz-transition-property: opacity;  
@@ -67,5 +68,8 @@ html, body {
     transition-property: opacity;  
     transition-duration: 0.1s;  
     transition-timing-function: ease;  
-    
 }​
+
+p {
+    -webkit-writing-mode: vertical-rtl;
+}
