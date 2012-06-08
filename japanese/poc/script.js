@@ -90,7 +90,7 @@ var two_up = false; // are we in two up mode
 
 $(function() {
 
-	var frame = '<iframe src="../OPS/xhtml/sample.xhtml" scrolling="no" frameborder="0" id="content-frame" width="520px" height="520px"></iframe>'
+	var frame = '<iframe src="../OPS/xhtml/sample.xhtml" scrolling="yes" frameborder="0" id="content-frame" width="500px" height="500px"></iframe>'
 	$('#frame-wrap').html(frame);
 	$('#content-frame').load(function() {
 		$($(this).contents()[0].body).css({
@@ -101,7 +101,8 @@ $(function() {
 			"position": "absolute",
 			"left": "0px",
 			"-webkit-column-width": "500px",
-			"width": "500px",
+			"width": "100%",
+			"height": "100%",
 			"-webkit-transition-property": "opacity",
 		    "-webkit-transition-duration": "0.1s",
 	    	"-webkit-transition-timing-function": "ease"
